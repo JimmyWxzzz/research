@@ -1,33 +1,18 @@
 package modules.boot.bean;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @ConfigurationProperties(prefix = "mycar")
 public class Car {
     private String brand;
     private Integer price;
 
-    public String getBrand() {
-        return brand;
-    }
-
-    public Integer getPrice() {
-        return price;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public void setPrice(Integer price) {
-        this.price = price;
-    }
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "brand='" + brand + '\'' +
-                ", price=" + price +
-                '}';
-    }
 }

@@ -6,9 +6,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.interceptor.CacheAspectSupport;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
+
 
 //@SpringBootApplication(scanBasePackages = "modules")
 @SpringBootConfiguration
@@ -35,5 +36,9 @@ public class Main {
         boolean two = run.containsBean("two");
         System.out.println(one);
         System.out.println(two);
+
+        String[] beanNamesForType = run.getBeanNamesForType(CacheAspectSupport.class);
+        System.out.println(beanNamesForType.length);
+        
     }
 }
