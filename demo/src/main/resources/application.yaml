@@ -1,0 +1,27 @@
+person:
+  boss: true
+  birth: 2019/12/9
+  age: 18
+  interests:
+    - basketball
+    - football
+    - baseball
+  animal: [cat, dog]
+  score:
+    english: 80
+    math: 90
+  salarys:
+    - 9999.98
+    - 9999.99
+  pet:
+    name: kiwi
+    weight: 99.99
+  allPets:
+    sick:
+      - {name: kiwi, weight: 99.99}
+      - name: cheese
+        weight: 77.77
+    healthy:
+      - name: boots
+        weight: 66.66
+  user-name:
