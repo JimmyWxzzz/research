@@ -1,5 +1,6 @@
 package com.webdev.controller;
 
+import com.webdev.bean.Person;
 import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.web.bind.annotation.*;
 
@@ -60,6 +61,11 @@ public class paramTestController {
         map.put("empID", empAge);
         return map;
 
+    }
+    @PostMapping("/saveuser")
+    public Person saveuser(Person person){
+
+        return person;
     }
 
 }
