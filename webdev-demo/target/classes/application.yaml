@@ -11,3 +11,8 @@ spring:
         enabled: true
     contentnegotiation:
       favor-parameter: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
