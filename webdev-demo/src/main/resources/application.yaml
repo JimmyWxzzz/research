@@ -11,8 +11,29 @@ spring:
         enabled: true
     contentnegotiation:
       favor-parameter: true
+  boot:
+    admin:
+      client:
+        url: http://localhost:8888
 management:
+  info:
+    env:
+      enabled: true
   endpoints:
     web:
       exposure:
         include: "*"
+    enabled-by-default: true
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+    info:
+      enabled: true
+    beans:
+      enabled: true
+    metrics:
+      enabled: true
+info:
+  info: mycustomvalue
+  mavenProjectName: @project.version@
